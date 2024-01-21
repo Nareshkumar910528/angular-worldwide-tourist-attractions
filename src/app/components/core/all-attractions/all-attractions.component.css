@@ -1,0 +1,17 @@
+.attraction-section {
+    margin: 30px;
+}
+
+.attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: #cc2062;
+    color: white;
+    border-radius: 12px;
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+}

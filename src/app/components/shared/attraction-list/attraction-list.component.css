@@ -1,0 +1,128 @@
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .item {
+    margin: 1rem 0;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    height: 29rem;
+    margin: 15px;
+  }
+  
+  .image {
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  
+  .image img {
+    width: 25rem;
+    object-fit: cover;
+    height: 15rem;
+  }
+  
+  .content {
+    text-align: center;
+    /* padding: 1rem; */
+  }
+  
+  .content h3 {
+    font-size: 1.25rem;
+    color: #2c292b;
+  }
+  
+  .actions {
+    /* padding: 1.5rem; */
+    text-align: center;
+  }
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    color: #77002e;
+    border: 1px solid #77002e;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: #ffe2ed;
+  }
+
+  .place-fav-star {
+    display: flex;
+    justify-content: center;
+  }
+
+  #star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+  }
+  #star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  #star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  #star-six {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid red;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+  #star-six:after {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid red;
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: -10px;
+  }

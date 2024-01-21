@@ -1,0 +1,33 @@
+<section>
+    <h1>Add New Attraction</h1>
+</section>
+
+<div class="card">
+    <form class="form">
+
+        <div class="control" [formGroup]="addNewAttractionForm">
+            <label for='place'>Place</label>
+            <input type='text' id='place' formControlName="attractionName" (input)="onInputAttractionName($event)"/>
+        </div>
+
+        <div class="control" [formGroup]="addNewAttractionForm">
+            <label for='image'>Image URL</label>
+            <input type='url' id='image' formControlName="attractionImage" (input)="onInputAttractionImage($event)"/>
+        </div>
+
+        <div class="control" [formGroup]="addNewAttractionForm">
+            <label for='location'>Location</label>
+            <input type='text' id='location' formControlName="attractionLocation" (input)="onInputAttractionLocation($event)"/>
+        </div>
+
+        <div class="control" [formGroup]="addNewAttractionForm">
+            <label for='continent'>Continent</label>
+            <input id='continent' rows='5' formControlName="attractionContinent" (input)="onInputAttractionContinent($event)"/>
+        </div>
+
+        <div class="add-action">
+            <button class="add-btn" [disabled]="!addNewAttractionForm.valid"  (click)="addNewAttractionData($event)">Add Attraction</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,8 @@
+.attraction-section {
+    margin: 30px;
+}
+
+.attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+}
