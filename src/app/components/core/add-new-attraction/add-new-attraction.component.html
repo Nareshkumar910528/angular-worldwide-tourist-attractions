@@ -7,22 +7,22 @@
 
         <div class="control" [formGroup]="addNewAttractionForm">
             <label for='place'>Place</label>
-            <input type='text' id='place' formControlName="attractionName" (input)="onInputAttractionName($event)"/>
+            <input type='text' id='place' formControlName="attractionName" (input)="onInputValue($event, 'name')"/>
         </div>
 
         <div class="control" [formGroup]="addNewAttractionForm">
             <label for='image'>Image URL</label>
-            <input type='url' id='image' formControlName="attractionImage" (input)="onInputAttractionImage($event)"/>
+            <input type='url' id='image' formControlName="attractionImage" (input)="onInputValue($event, 'image')"/>
         </div>
 
         <div class="control" [formGroup]="addNewAttractionForm">
             <label for='location'>Location</label>
-            <input type='text' id='location' formControlName="attractionLocation" (input)="onInputAttractionLocation($event)"/>
+            <input type='text' id='location' formControlName="attractionLocation" (input)="onInputValue($event, 'location')"/>
         </div>
 
         <div class="control" [formGroup]="addNewAttractionForm">
             <label for='continent'>Continent</label>
-            <input id='continent' rows='5' formControlName="attractionContinent" (input)="onInputAttractionContinent($event)"/>
+            <input id='continent' rows='5' formControlName="attractionContinent" (input)="onInputValue($event, 'continent')"/>
         </div>
 
         <div class="add-action">

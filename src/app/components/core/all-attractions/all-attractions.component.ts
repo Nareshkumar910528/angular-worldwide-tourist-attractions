@@ -27,6 +27,7 @@ export class AllAttractionsComponent implements OnInit {
         this.touristAttractionArray.push(attraction);
       }
     });
+    this.touristAttractionArray.sort((a: any, b: any) => a.place.localeCompare(b.place));
     this.totalAttractionCounts = this.touristAttractionArray.length;
   }
 

@@ -47,6 +47,7 @@ export class AddNewAttractionComponent implements OnInit {
       continent: this.attractionContinent
     }
     this.touristAttractionDataService.createNewAttraction(newAttractionDetails).subscribe((data) => {
+      console.log('newTouristAttractionData: ', data);
       window.alert('New attraction has been created');
       this.router.navigate(['/all-attractions'], { relativeTo: this.activatedRoute });
     }, error => {
@@ -55,20 +56,20 @@ export class AddNewAttractionComponent implements OnInit {
     })
   }
 
-  onInputAttractionName($event: any) {
-    this.attractionName = $event.target.value;
+  onInputValue($event: any, property: string) {
+    switch(property) {
+      case 'name': 
+        this.attractionName = $event.target.value;
+        break;
+      case 'image': 
+        this.attractionImage = $event.target.value;
+        break;
+      case 'location': 
+        this.attractionLocation = $event.target.value;
+        break;
+      case 'continent': 
+        this.attractionContinent = $event.target.value;
+        break;  
+    }
   }
-
-  onInputAttractionImage($event: any) {
-    this.attractionImage = $event.target.value;
-  }
-
-  onInputAttractionLocation($event: any) {
-    this.attractionLocation = $event.target.value;
-  }
-
-  onInputAttractionContinent($event: any) {
-    this.attractionContinent = $event.target.value;
-  }
-
 }
